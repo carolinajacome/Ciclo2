@@ -1,0 +1,49 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch ejercicio5",
+            "request": "launch",
+            "mainClass": "co.com.misiontic2022.cjacome.ejercicio5",
+            "projectName": "clase02"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejercicio4",
+            "request": "launch",
+            "mainClass": "co.com.misiontic2022.cjacome.ejercicio4",
+            "projectName": "clase02"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejercicio3",
+            "request": "launch",
+            "mainClass": "co.com.misiontic2022.cjacome.ejercicio3",
+            "projectName": "clase02"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "co.com.misiontic2022.cjacome.App",
+            "projectName": "clase02"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejercicio2",
+            "request": "launch",
+            "mainClass": "ejercicio2",
+            "projectName": "clase02"
+        }
+    ]
+}
