@@ -15,11 +15,11 @@ public class ejercicio5 {
         System.out.println(resultado(15));
         
     }
-    public static int resultado (int numero){
+    public static String resultado (int numero){
       
         var res= (numero%2==0)? "es par": "es impar";
-        var conv=Integer.parseInt(res);
-        return  conv;
+        //var conv=Integer.parseInt(res);
+        return  res;
         
     }
 }
