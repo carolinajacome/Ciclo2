@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ejemplodowhile",
+            "request": "launch",
+            "mainClass": "co.com.misiontic2022.cjacome.ejemplodowhile",
+            "projectName": "clase02"
+        },
+        {
+            "type": "java",
             "name": "Launch ejercicio5",
             "request": "launch",
             "mainClass": "co.com.misiontic2022.cjacome.ejercicio5",
