@@ -6,10 +6,14 @@ porcentaje de IVA aplicado. Los datos anteriores se leerán por teclado
 package co.com.misiontic2022.cjacome;
 
 import java.util.Scanner;
+
+import org.antlr.v4.runtime.InputMismatchException;
 /**
  * Hello world!
  *
  */
+
+import net.bytebuddy.asm.Advice.Return;
 public class App 
 {
     public static void main( String[] args ){
@@ -28,7 +32,13 @@ public class App
     /**9*/ // hallarmayor();
     /*10*/  //comprobarHora();
     /*11*/ //asignarMeses();
-    /*12*/ mostrarNomultiplosdetres();
+    /*12*/ //mostrarNomultiplosdetres();
+    /**13 */ //convertirMoneda();
+    /**14 */ // serieFibonnacci();
+    /**15 */  // sumaFactoriales ();
+
+    /**16 */ // separarlineas();
+    /**17 */cambiardigitoPorLetra();
         //dividirendos();
         //comprobarMayuscula ();
         //calcularIVA();
@@ -242,7 +252,7 @@ public class App
             maximo= num2;
         }
         else{
-            System.out.println(("El mayor d4e los tres números es "+num3));
+            System.out.println(("El mayor de los tres números es "+num3));
             maximo= num3;
         }
         
@@ -437,27 +447,71 @@ public class App
     /**
      * Programa que pase de pesos a dólares y viceversa
      */
-    public static void convertirMoneda(){
+    public static Double convertirMoneda(){
     
         Scanner sn = new Scanner(System.in);
         boolean salir = false;
-                          //Guardaremos la opcion del usuario
-        
-       while(!salir){
-            
-           System.out.println("1. Opcion 1");
-           System.out.println("2. Opcion 2");
-           System.out.println("3. Opcion 3");
-           System.out.println("4. Salir");
-            
-           System.out.println("Escribe una de las opciones");
-            var  opcion = sn.nextInt();
-           sn.close();
-       }
+        int opcion; //Guardaremos la opcion del usuario
 
+        double opcionD= 0;
+ 
+        while (!salir) {
+ 
+            System.out.println("1. Convertir Pesos a Dólares");
+            System.out.println("2. Convertir Dólares a Pesos");
+           
+            System.out.println("3. Salir");
+ 
+            try {
+ 
+                System.out.println("Escribe una de las opciones");
+                opcion = sn.nextInt();
+                //double opcionD= opcion;
+ 
+                switch (opcion) {
+                    case 1:
+                        //System.out.println("Has seleccionado la opcion 1");
+                        double valor1dolar= 3742.00;
+                       // Scanner mon= new Scanner (System.in);
+                        System.out.println("Ingrese el valor a convertir");
+                        var valor= sn.nextFloat();
+                        
+                        var valorConv= valor*valor1dolar;
+                        System.out.println( "El valor es de "+ valorConv+ " Dólares");
+       
+                        break;
+                    case 2:
+                        
+
+                        double valor1peso= 0.00027;
+                        
+                        System.out.println("Ingrese el valor a convertir en dólares");
+                        var valor2= sn.nextFloat();
+                        
+                        var valorConv2= valor2/ valor1peso;
+                        System.out.println( "El valor es de "+ valorConv2 +" Pesos");
+
+                        break;
+                    case 3:
+                        salir = true;
+                        break;
+                    default:
+                        System.out.println("Solo números entre 1 y 3");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Debes insertar un número");
+                sn.next();
+            }
+
+        }
+        sn.close();
+        return opcionD;
+        
     }
 
-    public void convertirDolar_Peso(){
+    
+
+    public static double convertirDolar_Peso(){
 
         
         double valor1dolar= 3742.00;
@@ -467,6 +521,7 @@ public class App
         mon.close();
         var valorConv= valor*valor1dolar;
         System.out.println( "El valor es de "+ valorConv);
+        return valorConv;
     }
 
     public void convertirPeso_Dolar(){
@@ -485,9 +540,70 @@ public class App
      *  Mostrar los N primeros términos de la serie de Fibonacci
      */
 
+     public static int serieFibonnacci(){
+
+        Scanner n= new Scanner(System.in);
+        System.out.println("Ingrese el número para calcular la serie Fibonacci");
+        var num= n.nextInt();
+
+        var fib1=0;
+        var fib2=1;
+
+        var cont=0;
+        if (!(num<1)){
+            System.out.println("Número no puede ser menor a 1");
+        }
+        for (int i=1; i<=num;i++){
+
+          
+            
+            cont=fib1+fib2;
+            fib2=fib1;
+            fib1= cont;
+            System.out.println("#  "+ cont);
+            
+        }
+        //System.out.println("El total de la serie es "+fib2);
+        n.close();
+        return cont;
+    } 
+
      /**
       * 15. Leer un número N y calcular la suma de los factoriales de los números desde 0 hasta N
       */
+
+      public static int sumaFactoriales (){
+
+
+        Scanner n= new Scanner(System.in);
+        System.out.println("Ingrese el número límite del factorial");
+        var lim= n.nextInt();
+        var facto=1;
+        var suma=0;
+
+          
+                System.out.println("0! es 1");
+                for (int j = 1; j <= lim; j++) {
+                facto*=j;
+                
+   
+                System.out.println(j + "!"+ " es "+facto);
+                suma= suma+facto;
+            
+                }
+       
+
+          
+               // System.out.println("0! es 1");       
+        System.out.println(lim + "!"+ " es "+facto+ " y la suma es "+suma);
+        
+
+        n.close();
+        return facto;
+
+
+      }
+
 
     /**16.Programa que muestre en líneas separadas lo siguiente: 
         ZYWXVUTSRQPONMLKJIHGFEDCBA
@@ -500,12 +616,45 @@ public class App
         A
      * 
      */
+      public static String separarlineas(){
+        Scanner w= new Scanner(System.in);
+        System.out.println("Ingresa el texto :");
+        var word= w.next();
+        w.close();
+        
+       
+        
+        for (int i = 0; i < word.length(); i++) {
 
+            var word2= word.substring(i,word.length());
+            
+            System.out.println( word2);
+        }
+      //  System.out.println("word");
+        return word;
+
+      }
      /**
       * 17. Mostrar un contador de 5 dígitos. En lugar del dígito 3 se debe mostrar E.
       */
 
-} 
+      public static int cambiardigitoPorLetra(){
+
+        var cont=0;
+        for (int i = 1; i <= 5; i++) {
+            if (i==3){
+              System.out.println("1,2,E,4,5");
+
+            }
+            
+            }
+        
+        return cont;
+      }
+     
+
+
+}
 
 
     
