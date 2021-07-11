@@ -7,7 +7,7 @@ public class Rey  extends Ficha{
 
 
     
-    public Rey(String color) {
+    public Rey(Color color) {
         super(color);
        
     }

@@ -1,7 +1,12 @@
 package co.com.misiontic2022.c2.cjacome;
 
-public class Peon {
+public class Peon extends Ficha {
     
+    public Peon(Color color) {
+        super(color);
+    }
+
+
     public Boolean comer(){
         return true;
     }
@@ -12,5 +17,11 @@ public class Peon {
     }
     public Boolean mover(){
         return true;
+    }
+
+
+    @Override
+    public Boolean mover(Casilla casilla) {
+        return null;
     }
 }

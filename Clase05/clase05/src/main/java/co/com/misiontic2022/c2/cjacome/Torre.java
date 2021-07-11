@@ -3,7 +3,7 @@ package co.com.misiontic2022.c2.cjacome;
 public class Torre  extends Ficha{
     
 
-    public Torre(String color) {
+    public Torre(Color color) {
         super(color);
        
     }

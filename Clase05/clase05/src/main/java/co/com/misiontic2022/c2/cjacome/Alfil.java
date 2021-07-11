@@ -1,7 +1,7 @@
 package co.com.misiontic2022.c2.cjacome;
 
 public class Alfil  extends Ficha {
-    public Alfil(String color) {
+    public Alfil(Color color) {
         super(color);
         
     }
@@ -14,4 +14,6 @@ public class Alfil  extends Ficha {
     public Boolean mover(Casilla casilla) {
         return null;
     }
+
+    
 }

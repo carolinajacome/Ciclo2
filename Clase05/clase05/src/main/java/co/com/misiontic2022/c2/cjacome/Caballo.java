@@ -4,7 +4,7 @@ public class Caballo  extends Ficha{
 
 
     
-    public Caballo(String color) {
+    public Caballo(Color color) {
         super(color);
         
     }

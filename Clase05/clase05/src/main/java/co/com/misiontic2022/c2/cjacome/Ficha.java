@@ -2,7 +2,7 @@ package co.com.misiontic2022.c2.cjacome;
 //se agrega un modificar: Abstract class (no va a tener hijas)
 public abstract class Ficha {
 
-    private String color;
+    private Color color;
     public Boolean comer(Casilla casilla){
         if(casilla.estaOcupada()&& casilla.esContrincante(color))
         {
@@ -15,11 +15,11 @@ public abstract class Ficha {
     public  abstract Boolean mover(Casilla casilla);
         
 
-    public Ficha(String color) {
+    public Ficha(Color color) {
         this.color = color;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 

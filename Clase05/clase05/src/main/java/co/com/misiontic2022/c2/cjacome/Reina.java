@@ -1,7 +1,7 @@
 package co.com.misiontic2022.c2.cjacome;
 
 public class Reina  extends Ficha{
-    public Reina(String color) {
+    public Reina(Color color) {
         super(color);
       
     }

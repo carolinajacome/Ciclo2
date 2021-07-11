@@ -5,7 +5,7 @@ public  class Casilla {
 
 
 
-    private String color;
+    private Color color;
     private Integer columna;
     private Integer fila;
 
@@ -16,9 +16,11 @@ public  class Casilla {
     public Casilla(Integer fila, Integer columna) {
         this.columna = columna;
         this.fila = fila;
-        this.color= calcularColor();
+       // this.color= calcularColor();
+        this.color= ((fila %2==0 && columna%2==0) || (fila%2!=0 && columna%2!=0)? Color.BLANCO : Color.NEGRO);
     }
 
+/*
     private String calcularColor(){
         if ((fila %2==0 && columna%2==0) || (fila%2!=0 && columna%2!=0)){
             return "Blanco";
@@ -26,11 +28,12 @@ public  class Casilla {
         }
         return "Negro";
     }
+    */
     public Boolean estaOcupada(){
         return ficha!=null;
     }
     //se le agrega la negación para que el return sea verdadero
-    public Boolean esContrincante(String color){
+    public Boolean esContrincante(Color color){
         return ficha!=null && ficha.getColor().equals(color);
     }
 
