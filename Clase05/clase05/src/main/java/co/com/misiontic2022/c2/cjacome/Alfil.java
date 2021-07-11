@@ -9,4 +9,9 @@ public class Alfil  extends Ficha {
     public Boolean mover(){
         return true;
     }
+
+    @Override
+    public Boolean mover(Casilla casilla) {
+        return null;
+    }
 }

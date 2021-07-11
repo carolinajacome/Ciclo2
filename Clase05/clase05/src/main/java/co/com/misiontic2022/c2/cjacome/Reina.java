@@ -10,4 +10,9 @@ public class Reina  extends Ficha{
         return true;
     }
 
+    @Override
+    public Boolean mover(Casilla casilla) {
+        return null;
+    }
+
 }

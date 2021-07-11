@@ -20,7 +20,7 @@ public  class Casilla {
     }
 
     private String calcularColor(){
-        if ((fila %2==0 && columna%2==0) || (fila%2!=0 && columna%2!=0))){
+        if ((fila %2==0 && columna%2==0) || (fila%2!=0 && columna%2!=0)){
             return "Blanco";
 
         }

@@ -17,4 +17,9 @@ public class Rey  extends Ficha{
         this.getColor();
         return true;
     }
+
+    @Override
+    public Boolean mover(Casilla casilla) {
+        return null;
+    }
 }

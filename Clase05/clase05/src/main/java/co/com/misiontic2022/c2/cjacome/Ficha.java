@@ -1,6 +1,6 @@
 package co.com.misiontic2022.c2.cjacome;
-
-public class Ficha {
+//se agrega un modificar: Abstract class (no va a tener hijas)
+public abstract class Ficha {
 
     private String color;
     public Boolean comer(Casilla casilla){
@@ -12,9 +12,8 @@ public class Ficha {
         return false;
     }
 
-    public Boolean mover(){
-        return true;
-    }
+    public  abstract Boolean mover(Casilla casilla);
+        
 
     public Ficha(String color) {
         this.color = color;

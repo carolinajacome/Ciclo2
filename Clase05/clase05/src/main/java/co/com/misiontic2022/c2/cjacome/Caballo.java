@@ -12,5 +12,11 @@ public class Caballo  extends Ficha{
     public Boolean mover(){
         return true;
     }
+    //override->sobreescribir/polimorfismo
+    //cambiar la forma de implementar el método.
+    @Override
+    public Boolean mover(Casilla casilla) {
+        return null;
+    }
     
 }
