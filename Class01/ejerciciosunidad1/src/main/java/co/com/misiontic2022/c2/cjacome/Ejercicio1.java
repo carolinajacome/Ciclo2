@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class Ejercicio1 
 {
 
-   public  void   suma(){
+   public  void   operacion(){
       
 
       var n= new Scanner(System.in);

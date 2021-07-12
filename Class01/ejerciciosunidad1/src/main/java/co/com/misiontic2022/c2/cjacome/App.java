@@ -9,7 +9,10 @@ public class App
     public static void main( String[] args )
     {
        // System.out.println( "Hello World!" );
-        Ejercicio1 llamada= new Ejercicio1();
-        llamada.operacion();
+       // Ejercicio1 llamada= new Ejercicio1();
+        //llamada.operacion();
+
+        Ejercicio4 llamada4= new Ejercicio4();
+        llamada4.tablasdemultiplicar();
     }
 }
